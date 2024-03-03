@@ -160,7 +160,7 @@ let x = if true {
 }
 ```
 
-!> `cond` is currently wip and will look something like this
+Cond allows you to test multiple conditions, and take the appropriate statement
 ```
 cond {
     x < 10 => # branch
