@@ -87,6 +87,33 @@ The operator for getting an item at an index from a tuple, or array is `@`, and 
 
 [1 2 3] @ 5 # :nil
 ```
+## Maps
+
+Maps are the implementation of "objects" in renelle. They can be used as both, plain objects, like in javascript, and as dictionaries like in python. In this first example all the keys are actually atoms, but when they are you can use . notation to get the properties.
+
+```
+let cat = {
+    name: "Hayley"
+    age: 8
+}
+
+cat.name # returns "Hayley"
+```
+
+When using them like dictionaries, you can store any valid expression in the key, including, arrays, lambdas, and other maps. To get the non-atom values, you would use the `@` operator
+
+```
+let add = \x y => x + y
+let sub = \x y => x - y
+
+let ops = {
+    add = "+"
+    sub = "-"
+}
+
+ops@add # returns "+"
+```
+
 
 ## Assignment
 
@@ -109,6 +136,16 @@ let [x y z] = array
 
 let tuple = (1 2)
 let (a _) = tuple
+```
+
+## Pipelines
+
+Renelle has a pipeline operator `|>` which you can use to pass data and avoid function nesting. It always passes the expression on the left to the first argument of the function on the right.
+
+```
+[1 2 3]
+|> push(4) # [1 2 3 4]
+|> tail() # [2 3 4]
 ```
 
 ## Conditionals
