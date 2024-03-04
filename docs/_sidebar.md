@@ -5,5 +5,5 @@
     * [Editors](Editors)
 
 * Modules
-    * [Kernel](Kernel)
-    * [Array](Array)
+    * [Kernel](modules/kernel)
+    * [Array](modules/array)
