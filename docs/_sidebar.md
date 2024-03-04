@@ -6,3 +6,4 @@
 
 * Modules
     * [Kernel](Kernel)
+    * [Array](Array)
