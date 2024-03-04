@@ -133,3 +133,35 @@ Returns all items in the `array` except for the first one.
 let array = [1 2 3]
 tail(array) [2 3]
 ```
+---
+
+### zip
+
+#### zip(array1, array2)
+
+Returns a new array with the elements from `array1` and `array2` joined together in a tuple
+
+#### example
+
+```
+let array_1 = [1 2 3]
+let array_2 = ["a" "b" "c"]
+Array.zip(array_1 array_2) # returns [(1 "a") (2 "b") (3 "c")]
+```
+
+---
+
+### zip_with
+
+#### zip_with(array1, array2, f)
+
+Returns a new array with the function `f` applied to each set of arguments in an array. Returns early if either array runs out of elements.
+
+#### example
+
+```
+let a = [1 2 3 4 5]
+let b = [1 2 3]
+let add = \x y => x + y
+Array.zip_with(a b add) # returns [2 4 6]
+```
