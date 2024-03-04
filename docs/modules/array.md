@@ -105,6 +105,22 @@ Array.quicksort_by(cats, \x => x.age) # returns [{age: 2} {age: 4} {age: 7}]
 ```
 ---
 
+### reverse
+
+#### reverse(array)
+
+Returns a new array that is a reversed version of the original array
+
+#### example
+
+```
+let array = [1 2 3]
+let reversed = Array.reverse(array)
+array # [1 2 3]
+reversed # [3 2 1]
+```
+---
+
 ### tail
 
 #### tail(array)
