@@ -49,6 +49,22 @@ Array.head(array) # returns 1
 ```
 ---
 
+### join
+
+#### join(array, separator)
+
+Joins all strings in an array, with separator between items.
+
+#### example
+
+```
+let array = ["a" "b" "c"]
+Array.join(array ", ")
+#returns "a, b, c"
+```
+
+---
+
 ### length
 
 #### length(array)
@@ -136,6 +152,22 @@ let reversed = Array.reverse(array)
 array # [1 2 3]
 reversed # [3 2 1]
 ```
+---
+
+### sum
+
+#### sum(array)
+
+Sums all items in an array
+
+#### example
+
+```
+let array = [1 2 3]
+Array.sum(array)
+# returns 6
+```
+
 ---
 
 ### tail
