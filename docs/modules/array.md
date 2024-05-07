@@ -21,6 +21,22 @@ Array.concat(a1 a2) # returns [1 2 3 4]
 ```
 ---
 
+### empty?
+
+#### empty?(array)
+
+Returns wether the given array is empty.
+
+#### example
+
+```
+let nums = [1 2 3]
+Array.empty?(nums) # false
+Array.empty?([]) # true
+```
+
+---
+
 ### filter
 
 #### filter(array, predicate)

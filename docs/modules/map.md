@@ -6,6 +6,25 @@ The `map` module has all of the standard library functions for working with maps
 
 ## Functions
 
+### has_key?
+
+#### has_key?(map, key)
+
+Returns wether the `key` is a member of the given `map`
+
+#### example
+
+```
+let cat = {
+    name: "Hayley"
+}
+
+Map.has_key?(cat, :name) # true
+Map.has_key?(cat, :age) # false
+```
+
+---
+
 ### length
 
 #### length(map)
