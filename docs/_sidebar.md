@@ -7,4 +7,5 @@
 * Modules
     * [Kernel](modules/kernel)
     * [Array](modules/array)
+    * [File](modules/file)
     * [Map](modules/map)

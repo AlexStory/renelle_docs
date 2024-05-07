@@ -2,7 +2,7 @@
 
 ## Summary
 
-The `map` module has all of the standard library functions for working with maps. These will most all take a map as the first argument to facilitate pipelining.
+The `Map` module has all of the standard library functions for working with maps. These will most all take a map as the first argument to facilitate pipelining.
 
 ## Functions
 
