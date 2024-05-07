@@ -105,6 +105,23 @@ Array.quicksort_by(cats, \x => x.age) # returns [{age: 2} {age: 4} {age: 7}]
 ```
 ---
 
+### reduce
+
+#### reduce(array, acc, f)
+
+Reduces over an array, applying the function `f` to the accumulator and the next item in the array.
+
+#### example
+
+```
+let add = \x y => x + y
+let numbers = [1 2 3]
+let sum = Array.reduce(numbers, 0, add)
+# returns 6
+```
+
+---
+
 ### reverse
 
 #### reverse(array)
