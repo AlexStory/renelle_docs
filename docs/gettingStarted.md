@@ -114,6 +114,17 @@ let ops = {
 ops@add # returns "+"
 ```
 
+Maps can be updated using the `with` keyword, like so.
+
+```
+let cat = {
+    name: "Hayley"
+    age: 8
+}
+
+let cat2 = { cat with :name = "Toothless" }
+```
+
 
 ## Assignment
 
