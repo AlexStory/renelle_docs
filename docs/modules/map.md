@@ -25,6 +25,24 @@ Map.has_key?(cat, :age) # false
 
 ---
 
+### keys
+
+#### keys(map)
+
+Returns an array of all keys in the given `map`
+
+#### example
+
+```
+let cat = {
+    name: "hayley"
+    age: 8
+}
+Map.keys(cat) # [name: age:]
+```
+
+---
+
 ### length
 
 #### length(map)
@@ -39,6 +57,26 @@ let cat = {
     age: 8
 }
 Map.length(cat) # returns 2
+```
+
+---
+
+### map
+
+#### map(map, f)
+
+Iterates over the `map` calling `f` for each key, value pair. and returning a new map with the result for the values.
+
+#### example
+
+```
+let cat = {
+    name: "hayley"
+    fur: "soft"
+}
+
+let exclaim = \_ v => v + "!"
+Map.map(cat, exclaim) # { name: "hayley!", fur: "soft!" }
 ```
 
 ---
