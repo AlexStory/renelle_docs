@@ -6,6 +6,21 @@ The `Array` module has all of the standard library functions for working with ar
 
 ## Functions
 
+### all?
+
+#### all?(array, predicate)
+
+Returns true if all member of the `array` return true for the `predicate`.
+
+#### example
+
+```
+let a = [2 4 6]
+Array.all?(a, \x => x % 2 == 0) # true
+```
+
+---
+
 ### any?
 
 #### any?(array, predicate)

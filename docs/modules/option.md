@@ -6,6 +6,22 @@ The `Option` module has all of the standard library functions for working with o
 
 ## Functions
 
+### bind
+
+#### bind(option, f)
+
+Applies the function `f` to the value of the `option` and returns it if the `option` is some, else returns `:none`
+
+#### example
+
+```
+let o = (:some 2)
+let f = \ x => (:some (x * 2))
+Option.bind(o, f) # (:some 4)
+```
+
+---
+
 ### default
 
 #### default(option, value)
