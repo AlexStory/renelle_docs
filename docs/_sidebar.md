@@ -9,3 +9,4 @@
     * [Array](modules/array)
     * [File](modules/file)
     * [Map](modules/map)
+    * [Option](modules/option)

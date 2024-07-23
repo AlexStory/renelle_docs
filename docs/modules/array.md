@@ -6,6 +6,19 @@ The `Array` module has all of the standard library functions for working with ar
 
 ## Functions
 
+### any?
+
+#### any?(array, predicate)
+
+Returns true if any element of the `array` returns true for the `predicate`, otherwise returns false.
+
+#### example
+
+```
+let a = [1 2 3]
+Array.any?(a, \x => x % 2 == 0) # true
+```
+
 ### concat
 
 #### concat(array1, array2)
@@ -19,6 +32,21 @@ let a1 = [1 2]
 let a2 = [3 4]
 Array.concat(a1 a2) # returns [1 2 3 4]
 ```
+---
+
+### contains?
+
+#### contains?(array, element)
+
+Returns true if the given `element` is present in the `array`, otherwise returns false.
+
+#### example
+
+```
+let a = [1 2 3]
+Array.contains(a, 2) # true
+```
+
 ---
 
 ### empty?
@@ -49,6 +77,22 @@ Returns all the elements in the `array` where the `predicate` function returns t
 let array = [1 2 3 4 5]
 Array.filter(array, \x => x % 2 == 0) # returns [2 4]
 ```
+---
+
+### find
+
+#### find(array, predicate)
+
+Returns the first element in the given `array` for which `predicate` returns true, otherwise returns`:nil`. If using an array which you suspect could have `:nil` as a value, use `try_find` instead.
+
+
+#### example
+
+```
+let a = [1 2 3]
+Array.find(a \x => x %2 == 0) # returns 2
+```
+
  ---
 
 ### head
@@ -76,7 +120,7 @@ Joins all strings in an array, with separator between items.
 ```
 let array = ["a" "b" "c"]
 Array.join(array ", ")
-#returns "a, b, c"
+# returns "a, b, c"
 ```
 
 ---
@@ -198,6 +242,23 @@ Returns all items in the `array` except for the first one.
 let array = [1 2 3]
 tail(array) [2 3]
 ```
+---
+
+### try_find
+
+
+#### try_find(array, predicate)
+
+returns `(:some, result)` if an element is found in the `array` that matches `predicate` otherwise returns `:none`
+
+#### example
+
+```
+let a = [1 2 3]
+Array.try_find(a \x => x % 2 == 0) # (:some 2)
+Array.try_find(a \x => x > 4) # :none
+```
+
 ---
 
 ### zip
