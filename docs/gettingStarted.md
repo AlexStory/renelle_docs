@@ -193,7 +193,7 @@ case mock_response {
 
 ## Functions
 
-Functions are declared with the `fn` keyword, and just like arrays and tuples, commas on the arguments are optional. Functions in renelle have an implicit return on their last value, but the `return` keyword is there for earlu returns.
+Functions are declared with the `fn` keyword, and just like arrays and tuples, commas on the arguments are optional. Functions in renelle have an implicit return on their last value, but the `return` keyword is there for early returns.
 
 ```
 fn add(x y) {
