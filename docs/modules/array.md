@@ -124,6 +124,20 @@ Array.head(array) # returns 1
 ```
 ---
 
+### iter
+
+#### iter(array, f)
+
+Runs the function `f` for each element in the `array`
+
+#### example
+
+```
+let a = [1 2 3]
+Array.iter(a, print) # prints each item to the std out
+```
+---
+
 ### join
 
 #### join(array, separator)
