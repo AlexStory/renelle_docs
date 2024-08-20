@@ -105,10 +105,25 @@ Returns the first element in the given `array` for which `predicate` returns tru
 
 ```
 let a = [1 2 3]
-Array.find(a \x => x %2 == 0) # returns 2
+Array.find(a \x => x % 2 == 0) # returns 2
 ```
 
- ---
+---
+
+### find_index
+
+#### find_index(array, predicate)
+
+Returns the index of the first element in the given `array` for which the `predicate` returns true, otherwise returns `:nil`.
+
+
+#### example 
+```
+let a = [1 2 3]
+Array.find_index(a, \x => x % 2 == 0) # returns 1
+```
+
+---
 
 ### head
 
@@ -210,11 +225,25 @@ Array.quicksort_by(cats, \x => x.age) # returns [{age: 2} {age: 4} {age: 7}]
 ```
 ---
 
+### range
+
+#### range(start, stop)
+
+Returns an array of all numbers from `start` to `stop`. If only one argument is passed in it returns an array from 0 to `stop`.
+
+#### example
+
+```
+Array.range(5) # [0 1 2 3 4]
+```
+
+---
+
 ### reduce
 
 #### reduce(array, acc, f)
 
-Reduces over an array, applying the function `f` to the accumulator and the next item in the array.
+Reduces over an array, applying the function `f` to the accumulator and the next item in the array. Reduce is a special function, and can also be called with only 2 arguments, the array and the function, in which case it will use the first element of the array as the initial accumulator.
 
 #### example
 
@@ -223,6 +252,45 @@ let add = \x y => x + y
 let numbers = [1 2 3]
 let sum = Array.reduce(numbers, 0, add)
 # returns 6
+```
+
+---
+
+### reduce_while
+
+#### reduce_while(array, acc, f) 
+
+Reduces over an array, applying the functon `f` to the accumulator and the next item in the array. Expects each iteration of `f` to return either `(:cont, acc)` or `(:halt, acc)` with `acc` being the new accumulator. If it hits `(:halt, acc)` it will return the value, otherwise it continues to the end of the array. `reduce_while` is a special function and can be called with either 2 or 3 arguments, and if called with only 2, the first item of the array will be supplied as the initial accumulator.
+
+#### example
+
+```
+fn is_even(_, x) {
+    if x % 2 == 0 {
+        (:halt true)
+    } else {
+        (:cont false)
+    }
+}
+
+fn any_even(array) {
+    Array.reduce_while(array, false, is_even)
+}
+```
+
+---
+
+### replace_at
+
+#### replace_at(array, index, elem)
+
+Replaces the item at the given `index` in the `array` with the new  `elem`
+
+#### example
+
+```
+let a = [1 2 3]
+Array.replace_at(a, 1, 0) # returns [1 0 3]
 ```
 
 ---
@@ -278,7 +346,7 @@ tail(array) [2 3]
 
 #### try_find(array, predicate)
 
-returns `(:some, result)` if an element is found in the `array` that matches `predicate` otherwise returns `:none`
+Returns `(:some, result)` if an element is found in the `array` that matches `predicate` otherwise returns `:none`
 
 #### example
 
@@ -286,6 +354,21 @@ returns `(:some, result)` if an element is found in the `array` that matches `pr
 let a = [1 2 3]
 Array.try_find(a \x => x % 2 == 0) # (:some 2)
 Array.try_find(a \x => x > 4) # :none
+```
+
+---
+
+### with_index
+
+#### with_index(array)
+
+Returns a new array as the pairing of each item with its index.
+
+#### example
+
+```
+let a = ["a" "b" "c"]
+Array.with_index(a) # returns [(0 "a") (1 "b") (2 "c")]
 ```
 
 ---
