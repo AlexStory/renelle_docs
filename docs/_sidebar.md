@@ -1,8 +1,8 @@
 * Home
     * [Home](/)
-    * [Installation](Installation)
-    * [Getting Started](GettingStarted)
-    * [Editors](Editors)
+    * [Installation](installation)
+    * [Getting Started](gettingStarted)
+    * [Editors](editors)
 
 * Modules
     * [Kernel](modules/kernel)
