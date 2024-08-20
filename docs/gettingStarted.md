@@ -57,6 +57,17 @@ Renelle has a data type known as atoms, where they represent their own value. So
 :nil
 ```
 
+## Assignment
+
+Values are assigned with `let` and `equals`, and there is not a way to change a value. Although you can reassign to the same name.
+
+```
+let x = 5
+let array = [1 2 3]
+x = x + 1 # throws an error
+let x = x + 1 # new binding to the name x
+```
+
 ## Arrays and Tuples
 
 Renelle has two basic collection types, arrays and tuples. They are both immutable, and used to represent groups of data. Arrays use [], and tuples use (). This is also a good time to bring up that commas are optional in renelle, and just treated as whitespace.
@@ -126,16 +137,6 @@ let cat2 = { cat with :name = "Toothless" }
 ```
 
 
-## Assignment
-
-Values are assigned with `let` and `equals`, and there is not a way to change a value. Although you can reassign to the same name.
-
-```
-let x = 5
-let array = [1 2 3]
-x = x + 1 # throws an error
-let x = x + 1 # new binding to the name x
-```
 
 ## Destructuring
 
@@ -147,6 +148,15 @@ let [x y z] = array
 
 let tuple = (1 2)
 let (a _) = tuple
+```
+
+## String Interpolation
+
+Renelle supports full string interpolation, with any arbitrary expression avalialbe to be used.
+
+```
+let name = "you"
+$"hello, {name} the count is {2 + 3}"
 ```
 
 ## Pipelines
