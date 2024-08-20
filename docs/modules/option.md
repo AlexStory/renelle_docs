@@ -86,7 +86,7 @@ Option.some(2) # (:some 2)
 
 #### some?(option)
 
-Returns true if an `option` is some, otherwise returns fales.
+Returns true if an `option` is some, otherwise returns false.
 
 #### example
 
