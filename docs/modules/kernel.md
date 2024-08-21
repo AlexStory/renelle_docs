@@ -2,7 +2,7 @@
 
 ## Summary
 
-The kernel module descrobes all of the built in functions in the default namespace. These are all implemented in the host language, and used to build other features.
+The kernel module describes all of the built in functions in the default namespace. These are all implemented in the host language, and used to build other features.
 
 ## Functions
 
@@ -132,7 +132,7 @@ tail([]) # returns :nil
 
 #### type(item)
 
-Returns the builtin type of the item as a string.
+Returns the built-in type of the item as a string.
 
 #### example
 

@@ -34,7 +34,7 @@ Renelle has many operators for working with the built in types.
 
 ## Booleans
 
-Renelle has booleans, and some operations for them. The conditional operations for renelle are short circuiting, and won't evaluate branches it know's don't matter.
+Renelle has booleans, and some operations for them. The conditional operations for renelle are short circuiting, and won't evaluate branches it knows don't matter.
 
 ```
 true
@@ -226,7 +226,7 @@ let complex_lambda = \ => {
 
 ## Scripting
 
-To run a script you can simply run `rnl ./my_file.rnl` and renelle will evaluate the file, and will use a function called `main` as the entry point. If you simply call `rnl` with no commands you will enter the REPL, an interactive prompt, where you can type renelle code into the command line. use Ctrl+c to quit.
+To run a script you can simply run `rnl ./my_file.rnl` and renelle will evaluate the file, and will use a function called `main` as the entry point. If you simply call `rnl` with no commands you will enter the REPL, an interactive prompt, where you can type renelle code into the command line. Use Ctrl+c to quit.
 
 *my_file.rnl*
 ```
@@ -239,7 +239,7 @@ fn main() {
 
 To run more than a single file you can use the cli tool to init a project, and call `rnl run` in the project to run it. Renelle expects all of your source code to be in the `src` directory, and that `src/main.rnl` is the entry point of your code. Specifically its `main` function.
 
-You can create a new project with `rnl new project_name`
+You can create a new project with `rnl new project_name`. Module names are in UpperCamelCase, while file, and function names should be in snake_case.
 
 Module naming should follow the filesystem. with the exception, that the main file will just be named after your app.
 

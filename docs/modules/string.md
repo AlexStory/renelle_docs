@@ -56,7 +56,7 @@ String.ends_with?(website, ".com") # true
 
 #### index_of(string, substr)
 
-Returns the index of the firs instance of the substring `substr` in the given `string`, returns -1 if it isn't found.
+Returns the index of the first instance of the substring `substr` in the given `string`, returns -1 if it isn't found.
 
 #### example
 
@@ -98,7 +98,7 @@ String.lower("Hello") # "hello"
 
 #### match?(string, regex)
 
-Returns wether the given `regex` matches for the given `string`
+Returns whether the given `regex` matches for the given `string`
 
 ### example
 
@@ -172,7 +172,7 @@ String.replace_all(string, "go", "rnl") # "I like rnl because rnl is fun"
 
 #### split(string, substr)
 
-Splits a given `string` into an array by the given substring `substr`. If a substring isn't suppliend it seperates each character.
+Splits a given `string` into an array by the given substring `substr`. If a substring isn't supplied it seperates each character.
 
 #### example
 

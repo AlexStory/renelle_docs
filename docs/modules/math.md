@@ -53,7 +53,7 @@ Math.cos(0) # 1
 
 #### floor(n)
 
-Rounds a loat down to the nearest integer
+Rounds a float down to the nearest integer
 
 #### example
 

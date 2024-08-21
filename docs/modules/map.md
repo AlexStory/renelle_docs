@@ -10,7 +10,7 @@ The `Map` module has all of the standard library functions for working with maps
 
 #### has_key?(map, key)
 
-Returns wether the `key` is a member of the given `map`
+Returns whether the `key` is a member of the given `map`
 
 #### example
 
@@ -47,7 +47,7 @@ Map.keys(cat) # [name: age:]
 
 #### length(map)
 
-Returns the number of items in of `map`
+Returns the number of items in a `map`
 
 #### example
 
@@ -65,7 +65,7 @@ Map.length(cat) # returns 2
 
 #### map(map, f)
 
-Iterates over the `map` calling `f` for each key, value pair. and returning a new map with the result for the values.
+Iterates over the `map` calling `f` for each key, value pair and returning a new map with the result for the values.
 
 #### example
 

@@ -68,7 +68,7 @@ Array.contains(a, 2) # true
 
 #### empty?(array)
 
-Returns wether the given array is empty.
+Returns whether the given array is empty.
 
 #### example
 
