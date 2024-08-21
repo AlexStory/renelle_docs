@@ -80,6 +80,21 @@ String.length("hello") # 5
 
 ---
 
+### lines
+
+#### lines(string)
+
+Returns an array of all lines in the `string`.
+
+#### example
+
+```
+let str = "hello\nthere"
+String.lines(str) # ["hello" "there"]
+```
+
+---
+
 ### lower
 
 #### lower(string)

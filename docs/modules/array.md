@@ -33,6 +33,22 @@ Returns true if any element of the `array` returns true for the `predicate`, oth
 let a = [1 2 3]
 Array.any?(a, \x => x % 2 == 0) # true
 ```
+---
+
+### average
+
+#### average(array)
+
+Returns the average of all items in the `array`
+
+#### example
+
+```
+let a = [1 2]
+Array.average(a) # 1.5
+```
+
+---
 
 ### concat
 
@@ -195,6 +211,68 @@ Applies the function `f` to every item in the `array`, and returns a new array w
 let array = [1 2 3]
 Array.map(array, \x => x + 1) # returns [2 3 4]
 ```
+---
+
+### max
+
+#### max(array)
+
+Returns the largest item in the `array`.
+
+#### example
+
+```
+let a = [1 3 2]
+Array.max(a) # 3
+```
+
+---
+
+### max_by
+
+#### max_by(array, f)
+
+Returns the largest item in the `array` when applying the function `f`.
+
+#### example
+
+```
+let a = ["apple" "pear" "banana"]
+Array.max_by(a, len) # "banana"
+```
+
+---
+
+### min
+
+#### min(array)
+
+Returns the smallest item in the array.
+
+#### example
+
+```
+let a = [3 1 2]
+Array.min(a) # 1
+```
+
+---
+
+### min_by
+
+#### min_by(array, f)
+
+Returns the smallest item in the `array` when applying the function `f`.
+
+#### example
+
+```
+let a = ["apple" "pear" "banana"]
+Array.min_by(a, len) # "pear"
+```
+
+---
+
 ---
 
 ### quicksort
