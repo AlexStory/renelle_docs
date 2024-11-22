@@ -243,6 +243,21 @@ Array.max_by(a, len) # "banana"
 
 ---
 
+### median
+
+### median(array)
+
+Returns the median item in an array. If the array has an even number of items, it will be the median of the first two.
+
+#### example
+
+```
+let a = [1 5 100]
+Array.median(a) # 5
+```
+
+---
+
 ### min
 
 #### min(array)

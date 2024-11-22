@@ -224,6 +224,23 @@ let complex_lambda = \ => {
 
 !> `fn` is for declaring top level functions in a script or module, and should not be nested. If you need another call use a helper function, or if you absolutely need a local function, use a lambda.
 
+
+## Loop form
+
+Renelle has a `loop` construct, but it is VERY different than imperitive loops. it takes an initial value, and a function to perform on each iteration. This function is expected to always return either: `(:cont, value)` with value being the new value for the loop to iterate over. Or `(:halt, value)` with value being the final return value of the loop. Here is an example of using this to achieve the classic `(i = 0; i <= 10; i++)` from an imperitive language.
+
+```
+loop(0, \i => {
+    print(i)
+    if i == 9 {
+        (:halt, i)
+    } else {
+        (:cont, i + 1)
+    }
+})
+```
+
+
 ## Scripting
 
 To run a script you can simply run `rnl ./my_file.rnl` and renelle will evaluate the file, and will use a function called `main` as the entry point. If you simply call `rnl` with no commands you will enter the REPL, an interactive prompt, where you can type renelle code into the command line. Use Ctrl+c to quit.
