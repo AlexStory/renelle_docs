@@ -153,6 +153,19 @@ String.pad_right("cat", 5) # "cat  "
 
 ---
 
+### parse_num
+
+#### parse_num(string)
+
+Parses a string, and returns a float, or int if it can parse it or nil otherwise.
+
+```
+String.parse_num("2") # 2
+String.parse_num("not a num") # :nil
+```
+
+---
+
 ### replace
 
 #### replace(string, old, new)
@@ -254,6 +267,19 @@ Trims all whitespace characters from the start of the given `string`.
 ```
 let string = "   hello\r\n"
 String.trim_start(string) # "hello\r\n"
+```
+
+---
+### try_parse_num
+
+#### try_parse_num(string)
+Tries to parse the give `string` into an int or float, and returns `(:some, number)` if successful, or `:none` if not.
+
+#### example
+
+```
+String.try_parse_num("2") # (:some, 2)
+String.try_parse_num("not a num") # :none
 ```
 
 ---
